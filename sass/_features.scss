@@ -1,0 +1,160 @@
+
+// ****************** Modal Form ****************** //
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    transition: .5s;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: .5rem;
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+/*<====================== Form ==========================>*/
+#form {
+    width: 100%;
+    text-align: left;
+    position: relative;
+
+    h2 {
+        color: $primary-color;
+    }
+
+    .form-group {
+        margin: 5px 0;
+
+        input, textarea {
+            border: 1px solid $dark-color;
+            padding: .6rem;
+            width: 100%;
+        }
+    }
+
+    .form-group.actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            padding: .7rem 2.5rem;
+            color: $white-color;
+            background-color: $primary-color;
+            border: 0;
+            cursor: pointer;
+            box-shadow: 0 0 5px $primary-color;
+
+            &:hover {
+                background-color: #fc483a;
+            }
+        }
+
+        .cancel {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 1.5rem;
+            background: transparent;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+// ****************** Modal Products ****************** //
+.modal-products {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    color: $white-color;
+    z-index: 3;
+    opacity: 0;
+    visibility: 0;
+    pointer-events: none;
+
+    &.appear {
+        opacity: 1;
+        visibility: 1;
+        pointer-events: all;
+
+        .modal-content {
+            animation: zoom .4s linear;
+        }
+    }
+
+    .modal-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+
+        .modal-img {
+            max-width: 700px;
+            width: 85%;
+            height: 400px;
+        }
+
+        .modal-text {
+            margin-top: 2rem;
+            font-size: 2rem;
+        }
+    }
+
+    .close {
+        position: absolute;
+        right: 5%;
+        top: 4%;
+        cursor: pointer;
+        font-size: 2rem;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+// ****************** Scroll back to top ****************** //
+.scroll-back-to-top {
+    background-color: black;
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    background-color: #27ae60;
+    bottom: 5%;
+    right: 40px;
+    opacity: 0;
+    visibility: 0;
+    transition: .5s;
+
+    &.show {
+        opacity: 1;
+        visibility: 1;
+    }
+
+    a {
+        color: #fff;
+        font-size: 1.4rem;
+    }
+}

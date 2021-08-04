@@ -1,0 +1,167 @@
+// -------------------------------------- @Media Queries -------------------------------------- //
+@media (max-width: 1190px) {
+    html {
+        font-size: 15px;
+
+        .services-features .feature {
+            max-width: 13rem;
+    
+            img {
+                max-width: 5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    #services .services-content {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        text-align: center;
+
+        .services-features {
+            justify-content: center;
+
+            .features-group-1, .features-group-2 {
+                width: 100%;
+                display: grid;
+                place-items: center;
+
+                &.features-group-2 {
+                    margin: 0;
+                }
+
+                .feature {
+                    min-width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 865px){
+    .top-header-txt{
+        text-align: center;
+        display: block;
+
+        span:first-child{
+            display: none;
+        }
+    }
+    
+    .navbar{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .4s;
+        left: -100%;
+
+        &.active {
+            left: 0;
+        }
+
+        ul.nav-menu{
+            flex-direction: column;
+
+            .nav-link{
+                background-color: #d13f34;
+                text-align: center;
+                padding: 10px;
+                
+                a{
+                    color: #fff;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .showcase-txt {
+        min-width: 90%;
+        margin-top: -30px;
+    }
+
+    .company-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact-content {
+        flex-direction: column;
+
+        .contact-info, .form-box {
+            min-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 14px;
+
+        #showcase .showcase-txt p {
+            font-size: 1.1rem;
+        }
+
+        .services-buttons {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+    
+            a {
+                width: 100%;
+            }
+        }
+
+        .scroll-back-to-top {
+            width: 30px;
+            height: 30px;
+            right: 4%;
+            
+            a {
+                font-size: 1.2rem;
+            }
+        }
+    
+        #products .modal-text {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    html {
+        font-size: 13px;
+
+        #header {
+            .logo {
+                position: relative;
+                left: -22px;
+            }
+
+            .top-header span {
+                font-size: .95rem;
+            }
+        }
+
+        #showcase .showcase-txt h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media (max-width: 280px) {
+
+}
